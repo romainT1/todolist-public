@@ -23,9 +23,9 @@ jobs:
       postgres:
         image: postgres:12
         env:
-          POSTGRES_USER: todolist_user
-          POSTGRES_PASSWORD: todolist_password
-          POSTGRES_BD: todolist
+          POSTGRES_USER: ${{ secrets.DATABASE_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          POSTGRES_BD: ${{ secrets.DATABASE_NAME }}
         ports:
           - 5432:5432
 
